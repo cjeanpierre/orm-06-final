@@ -12,7 +12,7 @@ import org.springframework.data.jpa.repository.QueryHints;
 
 public interface RoleRepository extends JpaRepository<Role, Long> {
 
-	@QueryHints(@QueryHint(name = org.hibernate.annotations.QueryHints.CACHEABLE, value = "true"))
+	//@QueryHints(@QueryHint(name = org.hibernate.annotations.QueryHints.CACHEABLE, value = "true"))
 	List<Role> findByName(String name);
 	
 	@Modifying
